@@ -23,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="categories.rake" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="categories.rake" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/tasks/categories.rake">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="5" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0">
+            <state line="6" column="0" selection-start="224" selection-end="224" vertical-scroll-proportion="0.18108653">
               <folding />
             </state>
           </provider>
@@ -41,10 +41,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="README" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="14" selection-start="58" selection-end="58" vertical-scroll-proportion="0.06036217">
+            <state line="2" column="14" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -82,9 +82,9 @@
         <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/app/models/category.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20110830213615_create_categories.rb" />
-        <option value="$PROJECT_DIR$/lib/tasks/categories.rake" />
         <option value="$PROJECT_DIR$/lib/tasks/categories_parser.rb" />
         <option value="$PROJECT_DIR$/README" />
+        <option value="$PROJECT_DIR$/lib/tasks/categories.rake" />
       </list>
     </option>
   </component>
@@ -774,13 +774,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/tasks/categories.rake">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="5" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/tasks/categories_parser.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="0" selection-start="641" selection-end="641" vertical-scroll-proportion="0.0">
@@ -790,7 +783,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="14" selection-start="58" selection-end="58" vertical-scroll-proportion="0.06036217">
+        <state line="2" column="14" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tasks/categories.rake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="224" selection-end="224" vertical-scroll-proportion="0.18108653">
           <folding />
         </state>
       </provider>
