@@ -2,7 +2,7 @@ class CreateCategories < ActiveRecord::Migration
   def self.up
     create_table :categories do |t|
       t.string :name
-      t.string :url
+      t.text :url
       t.string :ancestry
 
       t.timestamps
