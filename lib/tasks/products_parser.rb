@@ -1,10 +1,7 @@
 # encoding: UTF-8
 
 require 'nokogiri'
-require 'open-uri'
 require 'peach'
-require 'net/http'
-require 'uri'
 require 'mechanize'
 
 module ProductParser
@@ -16,7 +13,7 @@ module ProductParser
     category_leafs = Category.find(:all).select {|c| c.children.empty?}
     
     #category_leafs.each do |c|
-    category_leafs.peach (5) do |c|
+    category_leafs[1..10].peach (5) do |c|
       agent.get(c.url+"?catalog_numitems=200")
       process_product(c,agent,1)
     end
