@@ -15,8 +15,8 @@ module ProductParser
     agent = Mechanize.new
     category_leafs = Category.find(:all).select {|c| c.children.empty?}
     
-    category_leafs.each do |c|
-    #category_leafs.peach (5) do |c|
+    #category_leafs.each do |c|
+    category_leafs.peach (5) do |c|
       agent.get(c.url+"?catalog_numitems=200")
       process_product(c.url,agent,1)
     end

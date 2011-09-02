@@ -3,6 +3,8 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.9'
 gem 'nokogiri'
 gem 'ancestry'
+gem 'peach'
+gem 'mechanize'
 
 group :cucumber do
   gem 'capybara'
