@@ -3,6 +3,7 @@ class CreateProducts < ActiveRecord::Migration
     create_table :products do |t|
       t.text :name
       t.text :url
+      t.integer :category_id
 
       t.timestamps
     end

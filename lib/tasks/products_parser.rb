@@ -18,22 +18,23 @@ module ProductParser
     #category_leafs.each do |c|
     category_leafs.peach (5) do |c|
       agent.get(c.url+"?catalog_numitems=200")
-      process_product(c.url,agent,1)
+      process_product(c,agent,1)
     end
   end
 
-  def self.process_product(base_url, agent, page = 1)
+  def self.process_product(category, agent, page = 1)
+    base_url = category.url
 
     agent.get(base_url+"?catalog_numitems=200")
 
     puts ""
     puts "processing: "+base_url
     puts "processing page: " + page.to_s
-    process_list(agent.page.parser)
+    process_list(agent.page.parser,category)
 
     page = 2
 
-    while (process_list(agent.get(base_url+"?page=#{page}").parser) > 0)
+    while (process_list(agent.get(base_url+"?page=#{page}").parser,category) > 0)
       puts ""
       puts "processing next page"
       page +=1
@@ -41,13 +42,14 @@ module ProductParser
 
   end
 
-  def self.process_list(doc)
+  def self.process_list(doc,category)
     counter = 0
 
     doc.css("h2 a").each do |p|
       product = Product.find_or_create_by_url(p[:href])
       product.name = p.text
       puts p.text
+      product.category = category
       product.save
       counter += 1
     end
@@ -56,6 +58,7 @@ module ProductParser
       product = Product.find_or_create_by_url(p[:href])
       product.name = p.text
       puts p.text
+      product.category = category
       product.save
       counter += 1
     end
