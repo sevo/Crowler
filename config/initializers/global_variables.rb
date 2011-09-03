@@ -1,0 +1,1 @@
+PRICEMANIA_URL = "http://www.pricemania.sk"

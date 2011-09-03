@@ -36,5 +36,10 @@ namespace :crawler do
     ShopsParser::all_shops
   end
 
+  desc "retrieve shop offers"
+  task :get_offers => :environment do
+    require File.join(File.dirname(__FILE__), "offer_parser.rb")
+    OfferParser::all_offers
+  end
 
 end

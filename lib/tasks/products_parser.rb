@@ -11,14 +11,17 @@ module ProductParser
   def self.all_products
     agent = Mechanize.new
     category_leafs = Category.find(:all).select {|c| c.children.empty?}
+    page_count = 0
     
     #category_leafs.each do |c|
     category_leafs[1..10].peach (5) do |c|
       agent.get(c.url+"?catalog_numitems=200")
-      process_product(c,agent,1)
+      page_count += process_product(c,agent,1)
     end
+    puts "#{page_count} pages processed"
   end
 
+  #spracuje jednu stranku kategorie (v ratane pokracovani zoznamu produktov)
   def self.process_product(category, agent, page = 1)
     base_url = category.url
 
@@ -37,13 +40,15 @@ module ProductParser
       page +=1
     end
 
+    (page -1)
   end
 
+  #spracuje jeden zoznam produktov
   def self.process_list(doc,category)
     counter = 0
 
     doc.css("h2 a").each do |p|
-      product = Product.find_or_create_by_url(p[:href])
+      product = Product.find_or_create_by_url(PRICEMANIA_URL+p[:href])
       product.name = p.text
       puts p.text
       product.category = category
@@ -63,7 +68,7 @@ module ProductParser
     counter
   end
 
-
+  #zisti celkovy pocet produktov na stranke pricemanie
   def self.products_number
     category_leafs = Category.find(:all).select {|c| c.children.empty?}
     sum = 0
@@ -77,6 +82,5 @@ module ProductParser
     end
     puts "sum: "+sum.to_s
   end
-
   
 end
