@@ -25,5 +25,4 @@ namespace :crawler do
     OffersParser::all_product_offers
   end
 
-
 end
