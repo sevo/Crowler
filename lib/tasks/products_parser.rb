@@ -57,7 +57,7 @@ module ProductParser
     end
 
     doc.css("h3 a").each do |p|
-      product = Product.find_or_create_by_url(p[:href])
+      product = Product.find_or_create_by_url(PRICEMANIA_URL+p[:href])
       product.name = p.text
       puts p.text
       product.category = category
