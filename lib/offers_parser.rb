@@ -2,13 +2,14 @@
 
 require 'nokogiri'
 require 'open-uri'
+require 'peach'
 
 module OffersParser
 
   #vyberie zo strany ponuky vsetkych produktov (v databaze) vsetkymi obchodami
   def self.all_product_offers
     products = Product.find(:all)
-    products.each do |p|
+    products.peach(5) do |p|
       product_detail(p)
     end
   end
