@@ -24,8 +24,8 @@ test: &test
   reconnect: false
   database: Crowler_test
   pool: 5
-  username: root
-  password:
+  username: development
+  password: development
   socket: /var/run/mysqld/mysqld.sock
 
 production:

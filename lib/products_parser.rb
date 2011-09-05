@@ -12,35 +12,41 @@ module ProductParser
     agent = Mechanize.new
     category_leafs = Category.find(:all).select {|c| c.children.empty?}
     page_count = 0
-    
+    product_count = 0
+
     #category_leafs.each do |c|
     category_leafs[1..10].peach (5) do |c|
       agent.get(c.url+"?catalog_numitems=200")
-      page_count += process_product(c,agent,1)
+      pages,products = process_product(c,agent,1)
+      product_count+=products
+      page_count+=pages
     end
     puts "#{page_count} pages processed"
+    puts "#{product_count} products created"
   end
 
   #spracuje jednu stranku kategorie (v ratane pokracovani zoznamu produktov)
   def self.process_product(category, agent, page = 1)
     base_url = category.url
+    product_count = 0
 
     agent.get(base_url+"?catalog_numitems=200")
 
     puts ""
     puts "processing: "+base_url
     puts "processing page: " + page.to_s
-    process_list(agent.page.parser,category)
+    product_count += process_list(agent.page.parser,category)
 
     page = 2
 
-    while (process_list(agent.get(base_url+"?page=#{page}").parser,category) > 0)
+    while ((count = process_list(agent.get(base_url+"?page=#{page}").parser,category)) > 0)
+      product_count+=count
       puts ""
       puts "processing next page"
       page +=1
     end
 
-    (page -1)
+    return (page -1),product_count
   end
 
   #spracuje jeden zoznam produktov
