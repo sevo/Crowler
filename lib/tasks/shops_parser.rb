@@ -33,15 +33,15 @@ module ShopsParser
       url = ""
 
       trs.each do |tr|
-        if tr.text.strip[/Web:/]
+        if tr.text[/Web:/]
 
-          url = tr.text[/http.+/]
+          url = tr.at_xpath("td[2]").text[/[^\s]+/]
         end
       end
 
-      if url != ""
-        shop = Shop.find_or_create_by_url(url)
-        shop.name = name
+      if name != ""
+        shop = Shop.find_or_create_by_name(name)
+        shop.url = url
         puts name
         shop.save
         counter += 1
