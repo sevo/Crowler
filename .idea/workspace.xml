@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c342f9f9-bbee-4fd1-9c54-620dfa9d6993" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Crowler.iml" afterPath="$PROJECT_DIR$/.idea/Crowler.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/offers_parser.rb" afterPath="$PROJECT_DIR$/lib/offers_parser.rb" />
     </list>
@@ -26,19 +28,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="xml_feed_parser.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/xml_feed_parser.rb">
+      <file leaf-file-name="offers_parser.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/offers_parser.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="40" selection-start="1495" selection-end="1495" vertical-scroll-proportion="0.0">
+            <state line="27" column="7" selection-start="967" selection-end="967" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="offers_parser.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/offers_parser.rb">
+      <file leaf-file-name="database.yml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/database.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="14" selection-start="71" selection-end="71" vertical-scroll-proportion="0.16042781">
+            <state line="11" column="31" selection-start="0" selection-end="985" vertical-scroll-proportion="0.44117647">
               <folding />
             </state>
           </provider>
@@ -139,7 +141,6 @@
         <option value="$PROJECT_DIR$/spec/parsers/shop_offers_parser_spec.rb" />
         <option value="$PROJECT_DIR$/spec/parsers/offers_parser_spec.rb" />
         <option value="$PROJECT_DIR$/lib/tasks/crawler.rake" />
-        <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/app/models/shop.rb" />
         <option value="$PROJECT_DIR$/app/models/shop_offer.rb" />
         <option value="$PROJECT_DIR$/app/models/product_description.rb" />
@@ -150,6 +151,7 @@
         <option value="$PROJECT_DIR$/lib/tasks/xml_parser.rake" />
         <option value="$PROJECT_DIR$/lib/xml_feed_parser.rb" />
         <option value="$PROJECT_DIR$/lib/offers_parser.rb" />
+        <option value="$PROJECT_DIR$/config/database.yml" />
       </list>
     </option>
   </component>
@@ -180,6 +182,7 @@
     </navigator>
     <panes>
       <pane id="Favorites" />
+      <pane id="Scope" />
       <pane id="RailsProjectView">
         <subPane>
           <PATH>
@@ -592,18 +595,17 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="org.jetbrains.plugins.ruby.settings.RubyIdeSdkConfigurable" />
+    <property name="recentsLimit" value="5" />
     <property name="RakeTaksPopup.undocumentedIncluded" value="false" />
     <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager" selected="Rake.db:migrate">
     <configuration default="false" name="categories_retrieval:process_home_page" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
@@ -925,11 +927,11 @@
       <item index="0" class="java.lang.String" itemvalue="Rake.categories_retrieval:process_home_page" />
       <item index="1" class="java.lang.String" itemvalue="Rake.db:rollback" />
       <item index="2" class="java.lang.String" itemvalue="Rake.db:migrate" />
-      <item index="3" class="java.lang.String" itemvalue="Rake.test" />
-      <item index="4" class="java.lang.String" itemvalue="Rake.spec" />
-      <item index="5" class="java.lang.String" itemvalue="Rails.Production: Crowler" />
-      <item index="6" class="java.lang.String" itemvalue="Rails.Development: Crowler" />
-      <item index="7" class="java.lang.String" itemvalue="Rake.db:create" />
+      <item index="3" class="java.lang.String" itemvalue="Rake.db:create" />
+      <item index="4" class="java.lang.String" itemvalue="Rake.test" />
+      <item index="5" class="java.lang.String" itemvalue="Rake.spec" />
+      <item index="6" class="java.lang.String" itemvalue="Rails.Production: Crowler" />
+      <item index="7" class="java.lang.String" itemvalue="Rails.Development: Crowler" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -964,9 +966,8 @@
     <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32776934" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32776934" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32776934" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.67223066" order="0" side_tool="false" content_ui="tabs" />
@@ -976,6 +977,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32776934" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1006,7 +1008,7 @@
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="pridane atribyty do produktov, ponuk ..., spravena prva verzia pre importovanie konkretneho xml feedu" />
+    <option name="LAST_COMMIT_MESSAGE" value="paralelizovane vyhladavanie ponuk" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1027,6 +1029,7 @@
     <MESSAGE value="pridany rake na ziskavanie ponuk obchodov" />
     <MESSAGE value="spravene testy na parsovanie ponuky pricemanie" />
     <MESSAGE value="pridane atribyty do produktov, ponuk ..., spravena prva verzia pre importovanie konkretneho xml feedu" />
+    <MESSAGE value="paralelizovane vyhladavanie ponuk" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1034,112 +1037,84 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/lib/tasks/crawler.rake">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="753" selection-end="753" vertical-scroll-proportion="0.0">
+        <state line="26" column="0" selection-start="753" selection-end="753" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/shop.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="32" selection-start="88" selection-end="88" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/shop_offer.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="18" selection-start="55" selection-end="55" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/category.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="6" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20110830213615_create_categories.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/xml_feed_parser.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="40" selection-start="1495" selection-end="1495" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tasks/xml_parser.rake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="13" selection-start="119" selection-end="119" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/product_image.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="21" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20110905133849_add_url_to_shop_offer.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20110905133936_add_attributes_to_product.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="30" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20110905135229_add_attributes_to_shop_offer.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/product_description.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="21" selection-start="86" selection-end="86" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/product.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="26" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20110902095017_create_products.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/offers_parser.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="7" selection-start="967" selection-end="967" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/database.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="32" selection-start="310" selection-end="310" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/shop.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="32" selection-start="88" selection-end="88" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/shop_offer.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="18" selection-start="55" selection-end="55" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/category.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="6" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20110830213615_create_categories.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20110902095017_create_products.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/product_description.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="21" selection-start="86" selection-end="86" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20110905133849_add_url_to_shop_offer.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/product_image.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="21" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/product.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="26" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20110905135229_add_attributes_to_shop_offer.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20110905133936_add_attributes_to_product.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="30" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/tasks/xml_parser.rake">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="119" selection-end="119" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/xml_feed_parser.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="40" selection-start="1495" selection-end="1495" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/offers_parser.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="14" selection-start="71" selection-end="71" vertical-scroll-proportion="0.16042781">
+        <state line="11" column="31" selection-start="0" selection-end="985" vertical-scroll-proportion="0.44117647">
           <folding />
         </state>
       </provider>
