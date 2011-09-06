@@ -10,11 +10,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110906103017) do
+ActiveRecord::Schema.define(:version => 20110906154040) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
-    t.text     "url"
+    t.text     "url",        :limit => 16777215
     t.string   "ancestry"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -59,8 +59,8 @@ ActiveRecord::Schema.define(:version => 20110906103017) do
   add_index "product_images", ["url"], :name => "index_product_images_on_url", :length => {"url"=>255}
 
   create_table "products", :force => true do |t|
-    t.text     "name"
-    t.text     "url"
+    t.text     "name",              :limit => 16777215
+    t.text     "url",               :limit => 16777215
     t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -77,7 +77,7 @@ ActiveRecord::Schema.define(:version => 20110906103017) do
     t.integer  "shop_id"
     t.integer  "product_id"
     t.float    "cost"
-    t.text     "name"
+    t.text     "name",         :limit => 16777215
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "url"
@@ -103,6 +103,14 @@ ActiveRecord::Schema.define(:version => 20110906103017) do
     t.string   "status"
     t.text     "result"
     t.integer  "shop_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "xml_file_downloads", :force => true do |t|
+    t.text     "url"
+    t.text     "path"
+    t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

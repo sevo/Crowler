@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Url:</b>
+  <%= @xml_file_download.url %>
+</p>
+
+<p>
+  <b>Path:</b>
+  <%= @xml_file_download.path %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @xml_file_download.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_xml_file_download_path(@xml_file_download) %> |
+<%= link_to 'Back', xml_file_downloads_path %>

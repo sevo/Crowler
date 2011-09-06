@@ -1,4 +1,8 @@
 Crowler::Application.routes.draw do
+  resources :xml_file_downloads
+
+  resources :xml_file_downloaders
+
   resources :xml_feed_handlers do
     member do
       get "run"

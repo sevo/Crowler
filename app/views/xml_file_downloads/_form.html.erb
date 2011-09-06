@@ -1,0 +1,21 @@
+<%= form_for(@xml_file_download) do |f| %>
+  <% if @xml_file_download.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@xml_file_download.errors.count, "error") %> prohibited this xml_file_download from being saved:</h2>
+
+      <ul>
+      <% @xml_file_download.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
