@@ -5,6 +5,7 @@ gem 'nokogiri'
 gem 'ancestry'
 gem 'peach'
 gem 'mechanize'
+gem 'sax-machine'
 
 group :cucumber do
   gem 'capybara'

@@ -2,48 +2,83 @@
 
 require 'nokogiri'
 require 'open-uri'
+require 'sax-machine'
 
 module XmlFeedParser
 
+    # Class for information associated with content parts in a feed.
+  #  Ex: <content type="text">sample</content>
+  #  instance.type will be "text", instance.text will be "sample"
+  class FeedContent
+    include SAXMachine
+    attribute :type
+    value :text
+  end
+
+  # Class for parsing an atom entry out of a feedburner atom feed
+  class FeedEntry
+    include SAXMachine
+    element :name
+    element :description
+    element :price
+    element :manufacturer
+    element :url
+    element :picture
+    element :availability
+    element :part_number
+    element :category
+    element :shipping
+    element :ean
+    element :content, :class => FeedContent
+    parent :parent
+  end
+
+  # Class for parsing Atom feeds
+  class Feed
+    include SAXMachine
+    elements :product, :as => :entries, :class => FeedEntry
+  end
+
+
   def self.parse(document,shop)
-    doc = Nokogiri::XML(document)
-    products = doc.xpath("/Products/product")
+    feed = Feed.parse(document)
 
-    puts "Celkovy pocet produktov: #{products.size}"
-
+    entries_number = feed.entries.size
+    puts "Celkovy pocet produktov: #{entries_number}"
+    
     counter = 0
     skipped = 0
-    
-    products.each do |p|
-      counter += 1
-      #ak chybaju nevyhnutne udaje tak preskoc zaznam
-      if p.at_xpath("name") == nil or p.at_xpath("price") == nil or p.at_xpath("url") == nil
+
+    feed.entries.each do |e|
+      counter+=1
+
+      if e.name == nil or e.price == nil or e.url == nil
         skipped +=1
         puts "product skipped"
         next
       end
 
-      puts "#{counter}\t/#{products.size} #{p.at_xpath("name").text}"
+      puts "#{counter}\t/#{entries_number} | #{e.name}"
 
-      product = Product.match(p.at_xpath("name").text)
-      product.manufacturer = p.at_xpath("manufacturer").text unless p.at_xpath("manufacturer") == nil
-      product.part_number = p.at_xpath("part_number").text unless p.at_xpath("part_number") == nil
-      product.ean = p.at_xpath("ean").text unless p.at_xpath("ean") == nil
+      product = Product.match(e.name)
+      product.manufacturer = e.manufacturer unless e.manufacturer == nil
+      product.part_number = e.part_number unless e.part_number == nil
+      product.ean = e.ean unless e.ean == nil
       product.save
 
-      ProductImage.find_or_create_by_product_id_and_url(product.id,p.at_xpath("picture").text) unless p.at_xpath("picture") == nil
+      ProductImage.find_or_create_by_product_id_and_url(product.id,e.picture) unless e.picture == nil
 
       offer = ShopOffer.find_or_create_by_product_id_and_shop_id(product.id,shop.id)
-      offer.name = name
-      offer.cost = p.at_xpath("price").text.to_f
-      offer.availability = p.at_xpath("availability").text unless p.at_xpath("availability") == nil
-      offer.shipping = p.at_xpath("shipping").text.to_f unless p.at_xpath("shipping") == nil
-      offer.url = p.at_xpath("url").text
+      offer.name = e.name
+      offer.cost = e.price.to_f
+      offer.availability = e.availability unless e.availability == nil
+      offer.shipping = e.shipping.to_f unless e.shipping == nil
+      offer.url = e.url
       offer.save
 
-      unless p.at_xpath("description") == nil or p.at_xpath("description").text == ""
+      unless e.description == nil or e.description == ""
         product_description = ProductDescription.find_or_create_by_product_id_and_shop_id(product.id,shop.id)
-        product_description.description = p.at_xpath("description").text
+        product_description.description = e.description
         product_description.save
       end
 

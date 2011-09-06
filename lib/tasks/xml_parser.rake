@@ -8,6 +8,6 @@ namespace :xml_parser do
     shop = Shop.find_or_create_by_name_and_url("alza.sk","http://www.alza.sk")
 
     #XmlFeedParser::parse(open("http://www.compatak.sk/export/pricemania.xml"))
-    XmlFeedParser::parse(open("/home/jakub/Desktop/pricemania.xml"),shop)
+    XmlFeedParser::parse(open("/home/jakub/Desktop/pricemania.xml").read,shop)
   end
 end

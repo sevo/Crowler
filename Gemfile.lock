@@ -114,6 +114,8 @@ GEM
       railties (~> 3.0)
       rspec (~> 2.6.0)
     rubyzip (0.9.4)
+    sax-machine (0.0.20)
+      nokogiri (> 0.0.0)
     selenium-webdriver (2.4.0)
       childprocess (>= 0.2.1)
       ffi (>= 1.0.7)
@@ -146,4 +148,5 @@ DEPENDENCIES
   peach
   rails (= 3.0.9)
   rspec-rails (>= 2.0.0.beta.10)
+  sax-machine
   spork
