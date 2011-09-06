@@ -6,6 +6,7 @@ gem 'ancestry'
 gem 'peach'
 gem 'mechanize'
 gem 'sax-machine'
+gem 'delayed_job'
 
 group :cucumber do
   gem 'capybara'

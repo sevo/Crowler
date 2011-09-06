@@ -1,0 +1,25 @@
+<%= form_for(@xml_feed_handler) do |f| %>
+  <% if @xml_feed_handler.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@xml_feed_handler.errors.count, "error") %> prohibited this xml_feed_handler from being saved:</h2>
+
+      <ul>
+      <% @xml_feed_handler.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :feed_url %><br />
+    <%= f.text_field :feed_url %>
+  </div>
+  <div class="field">
+    <%= f.label :shop %><br />
+    <%= f.text_field :shop %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110906084807) do
+ActiveRecord::Schema.define(:version => 20110906103017) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -21,6 +21,21 @@ ActiveRecord::Schema.define(:version => 20110906084807) do
   end
 
   add_index "categories", ["ancestry"], :name => "index_categories_on_ancestry"
+
+  create_table "delayed_jobs", :force => true do |t|
+    t.integer  "priority",   :default => 0
+    t.integer  "attempts",   :default => 0
+    t.text     "handler"
+    t.text     "last_error"
+    t.datetime "run_at"
+    t.datetime "locked_at"
+    t.datetime "failed_at"
+    t.string   "locked_by"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "delayed_jobs", ["priority", "run_at"], :name => "delayed_jobs_priority"
 
   create_table "product_descriptions", :force => true do |t|
     t.text     "description"
@@ -82,5 +97,14 @@ ActiveRecord::Schema.define(:version => 20110906084807) do
 
   add_index "shops", ["name"], :name => "index_shops_on_name", :length => {"name"=>255}
   add_index "shops", ["url"], :name => "index_shops_on_url", :length => {"url"=>255}
+
+  create_table "xml_feed_handlers", :force => true do |t|
+    t.text     "feed_url"
+    t.string   "status"
+    t.text     "result"
+    t.integer  "shop_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

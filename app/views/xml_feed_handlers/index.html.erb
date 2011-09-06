@@ -1,0 +1,30 @@
+<h1>Listing xml_feed_handlers</h1>
+
+<table>
+  <tr>
+    <th>Feed Url</th>
+    <th>Shop</th>
+    <th>Status</th>
+    <th>Result</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @xml_feed_handlers.each do |xml_feed_handler| %>
+  <tr>
+    <td><%= xml_feed_handler.feed_url %></td>
+    <td><%= xml_feed_handler.shop.name %></td>
+    <td><%= xml_feed_handler.status %></td>
+    <td><%= xml_feed_handler.result %></td>
+    <td><%= link_to 'Show', xml_feed_handler %></td>
+    <% unless xml_feed_handler.was_started? %>
+    <td><%= link_to 'Run',   run_xml_feed_handler_path(xml_feed_handler) %></td>
+    <% end %>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Xml feed handler', new_xml_feed_handler_path %>

@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Url:</b>
+  <%= @xml_feed_handler.feed_url %>
+</p>
+
+<p>
+  <b>Shop:</b>
+  <%= @xml_feed_handler.shop.name %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @xml_feed_handler.status %>
+</p>
+
+<p>
+  <b>Result:</b>
+  <%= @xml_feed_handler.result %>
+</p>
+
+<%= link_to 'Back', xml_feed_handlers_path %>

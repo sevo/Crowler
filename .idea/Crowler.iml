@@ -33,11 +33,11 @@
     <orderEntry type="library" scope="PROVIDED" name="net-http-digest_auth (v1.1.1, Ruby SDK 1.9.2-p180) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="gherkin (v2.4.6, Ruby SDK 1.9.2-p180) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.1.2, Ruby SDK 1.9.2-p180) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rspec-rails (v2.6.1, Ruby SDK 1.9.2-p180) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ancestry (v1.2.4, Ruby SDK 1.9.2-p180) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-rails (v2.6.1, Ruby SDK 1.9.2-p180) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v0.5.0, Ruby SDK 1.9.2-p180) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="childprocess (v0.2.1, Ruby SDK 1.9.2-p180) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activeresource (v3.0.9, Ruby SDK 1.9.2-p180) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="childprocess (v0.2.1, Ruby SDK 1.9.2-p180) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="database_cleaner (v0.6.7, Ruby SDK 1.9.2-p180) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="launchy (v2.0.5, Ruby SDK 1.9.2-p180) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.5.0, Ruby SDK 1.9.2-p180) [gem]" level="application" />
@@ -53,6 +53,7 @@
     <orderEntry type="library" scope="PROVIDED" name="activerecord (v3.0.9, Ruby SDK 1.9.2-p180) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="spork (v0.8.5, Ruby SDK 1.9.2-p180) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ffi (v1.0.9, Ruby SDK 1.9.2-p180) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="delayed_job (v2.1.4, Ruby SDK 1.9.2-p180) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="actionpack (v3.0.9, Ruby SDK 1.9.2-p180) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack (v1.2.3, Ruby SDK 1.9.2-p180) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-mount (v0.6.14, Ruby SDK 1.9.2-p180) [gem]" level="application" />
@@ -64,6 +65,7 @@
     <orderEntry type="library" scope="PROVIDED" name="capybara (v1.0.1, Ruby SDK 1.9.2-p180) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mysql2 (v0.2.6, Ruby SDK 1.9.2-p180) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rdoc (v3.6.1, Ruby SDK 1.9.2-p180) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="daemons (v1.1.4, Ruby SDK 1.9.2-p180) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails (v3.0.9, Ruby SDK 1.9.2-p180) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="xpath (v0.1.4, Ruby SDK 1.9.2-p180) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="arel (v2.0.10, Ruby SDK 1.9.2-p180) [gem]" level="application" />

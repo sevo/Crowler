@@ -40,12 +40,14 @@ module XmlFeedParser
   end
 
 
-  def self.parse(document,shop)
+  def self.parse(document,shop,save_result_to)
+
+    result = "#{shop.name} #{DateTime.new.in_time_zone}"
     feed = Feed.parse(document)
 
     entries_number = feed.entries.size
-    puts "Celkovy pocet produktov: #{entries_number}"
-    
+    result += "\n Total number of products: #{entries_number}"
+
     counter = 0
     skipped = 0
 
@@ -54,7 +56,6 @@ module XmlFeedParser
 
       if e.name == nil or e.price == nil or e.url == nil
         skipped +=1
-        puts "product skipped"
         next
       end
 
@@ -84,7 +85,10 @@ module XmlFeedParser
 
     end
 
-    puts "#{skipped} products skipped"
+    result+= "\n#{skipped} of products skipped (without required attributes)"
+
+    save_result_to.result = result
+    save_result_to.save
   end
   
 end

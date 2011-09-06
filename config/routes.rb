@@ -1,4 +1,11 @@
 Crowler::Application.routes.draw do
+  resources :xml_feed_handlers do
+    member do
+      get "run"
+    end
+
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
