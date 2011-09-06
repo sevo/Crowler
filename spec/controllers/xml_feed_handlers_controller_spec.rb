@@ -21,136 +21,55 @@ require 'spec_helper'
 describe XmlFeedHandlersController do
 
   # This should return the minimal set of attributes required to create a valid
-  # XmlFeedUpdate. As you add validations to XmlFeedUpdate, be sure to
-  # update the return value of this method accordingly.
+  # XmlFeedhandler. As you add validations to XmlFeedhandler, be sure to
+  # handler the return value of this method accordingly.
+  before :each do
+    Shop.create({:name => "alza.sk", :url => "Http://www.alza.sk"})
+  end
+
   def valid_attributes
-    {}
+    {:shop_id => 1}
   end
 
   describe "GET index" do
-    it "assigns all xml_feed_updates as @xml_feed_updates" do
-      xml_feed_update = XmlFeedHandler.create! valid_attributes
+    it "assigns all xml_feed_handlers as @xml_feed_handlers" do
+      xml_feed_handler = XmlFeedHandler.create! valid_attributes
       get :index
-      assigns(:xml_feed_handlers).should eq([xml_feed_update])
+      assigns(:xml_feed_handlers).should eq([xml_feed_handler])
     end
   end
 
   describe "GET show" do
-    it "assigns the requested xml_feed_update as @xml_feed_update" do
-      xml_feed_update = XmlFeedHandler.create! valid_attributes
-      get :show, :id => xml_feed_update.id.to_s
-      assigns(:xml_feed_update).should eq(xml_feed_update)
+    it "assigns the requested xml_feed_handler as @xml_feed_handler" do
+      xml_feed_handler = XmlFeedHandler.create! valid_attributes
+      get :show, :id => xml_feed_handler.id.to_s
+      assigns(:xml_feed_handler).should eq(xml_feed_handler)
     end
   end
 
   describe "GET new" do
-    it "assigns a new xml_feed_update as @xml_feed_update" do
+    it "assigns a new xml_feed_handler as @xml_feed_handler" do
       get :new
-      assigns(:xml_feed_update).should be_a_new(XmlFeedHandler)
-    end
-  end
-
-  describe "GET edit" do
-    it "assigns the requested xml_feed_update as @xml_feed_update" do
-      xml_feed_update = XmlFeedHandler.create! valid_attributes
-      get :edit, :id => xml_feed_update.id.to_s
-      assigns(:xml_feed_update).should eq(xml_feed_update)
+      assigns(:xml_feed_handler).should be_a_new(XmlFeedHandler)
     end
   end
 
   describe "POST create" do
-    describe "with valid params" do
-      it "creates a new XmlFeedUpdate" do
-        expect {
-          post :create, :xml_feed_update => valid_attributes
-        }.to change(XmlFeedHandler, :count).by(1)
-      end
-
-      it "assigns a newly created xml_feed_update as @xml_feed_update" do
-        post :create, :xml_feed_update => valid_attributes
-        assigns(:xml_feed_update).should be_a(XmlFeedHandler)
-        assigns(:xml_feed_update).should be_persisted
-      end
-
-      it "redirects to the created xml_feed_update" do
-        post :create, :xml_feed_update => valid_attributes
-        response.should redirect_to(XmlFeedHandler.last)
-      end
-    end
 
     describe "with invalid params" do
-      it "assigns a newly created but unsaved xml_feed_update as @xml_feed_update" do
+      it "assigns a newly created but unsaved xml_feed_handler as @xml_feed_handler" do
         # Trigger the behavior that occurs when invalid params are submitted
         XmlFeedHandler.any_instance.stub(:save).and_return(false)
-        post :create, :xml_feed_update => {}
-        assigns(:xml_feed_update).should be_a_new(XmlFeedHandler)
+        post :create, :xml_feed_handler => {}
+        assigns(:xml_feed_handler).should be_a_new(XmlFeedHandler)
       end
 
       it "re-renders the 'new' template" do
         # Trigger the behavior that occurs when invalid params are submitted
         XmlFeedHandler.any_instance.stub(:save).and_return(false)
-        post :create, :xml_feed_update => {}
+        post :create, :xml_feed_handler => {}
         response.should render_template("new")
       end
-    end
-  end
-
-  describe "PUT update" do
-    describe "with valid params" do
-      it "updates the requested xml_feed_update" do
-        xml_feed_update = XmlFeedHandler.create! valid_attributes
-        # Assuming there are no other xml_feed_updates in the database, this
-        # specifies that the XmlFeedUpdate created on the previous line
-        # receives the :update_attributes message with whatever params are
-        # submitted in the request.
-        XmlFeedHandler.any_instance.should_receive(:update_attributes).with({'these' => 'params'})
-        put :update, :id => xml_feed_update.id, :xml_feed_update => {'these' => 'params'}
-      end
-
-      it "assigns the requested xml_feed_update as @xml_feed_update" do
-        xml_feed_update = XmlFeedHandler.create! valid_attributes
-        put :update, :id => xml_feed_update.id, :xml_feed_update => valid_attributes
-        assigns(:xml_feed_update).should eq(xml_feed_update)
-      end
-
-      it "redirects to the xml_feed_update" do
-        xml_feed_update = XmlFeedHandler.create! valid_attributes
-        put :update, :id => xml_feed_update.id, :xml_feed_update => valid_attributes
-        response.should redirect_to(xml_feed_update)
-      end
-    end
-
-    describe "with invalid params" do
-      it "assigns the xml_feed_update as @xml_feed_update" do
-        xml_feed_update = XmlFeedHandler.create! valid_attributes
-        # Trigger the behavior that occurs when invalid params are submitted
-        XmlFeedHandler.any_instance.stub(:save).and_return(false)
-        put :update, :id => xml_feed_update.id.to_s, :xml_feed_update => {}
-        assigns(:xml_feed_update).should eq(xml_feed_update)
-      end
-
-      it "re-renders the 'edit' template" do
-        xml_feed_update = XmlFeedHandler.create! valid_attributes
-        # Trigger the behavior that occurs when invalid params are submitted
-        XmlFeedHandler.any_instance.stub(:save).and_return(false)
-        put :update, :id => xml_feed_update.id.to_s, :xml_feed_update => {}
-        response.should render_template("edit")
-      end
-    end
-  end
-
-  describe "DELETE destroy" do
-    it "destroys the requested xml_feed_update" do
-      xml_feed_update = XmlFeedHandler.create! valid_attributes
-      expect {
-        delete :destroy, :id => xml_feed_update.id.to_s
-      }.to change(XmlFeedHandler, :count).by(-1)
-    end
-
-    it "redirects to the xml_feed_updates list" do
-      xml_feed_update = XmlFeedHandler.create! valid_attributes
-      delete :destroy, :id => xml_feed_update.id.to_s
-      response.should redirect_to(xml_feed_updates_url)
     end
   end
 

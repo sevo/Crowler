@@ -1,9 +1,12 @@
 require 'spec_helper'
 
-describe "xml_feed_updates/show.html.erb" do
+describe "xml_feed_handlers/show.html.erb" do
   before(:each) do
-    @xml_feed_update = assign(:xml_feed_update, stub_model(XmlFeedHandler,
-      :url => "MyText",
+    shop = Shop.create({:name => "alza.sk", :url => "http://www.alza.sk"})
+
+    @xml_feed_handler = assign(:xml_feed_handler, stub_model(XmlFeedHandler,
+      :feed_url => "MyText",
+      :shop => shop,
       :status => "Status",
       :result => "MyText"
     ))

@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(:version => 20110906103017) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
-    t.text     "url",        :limit => 16777215
+    t.text     "url"
     t.string   "ancestry"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -59,8 +59,8 @@ ActiveRecord::Schema.define(:version => 20110906103017) do
   add_index "product_images", ["url"], :name => "index_product_images_on_url", :length => {"url"=>255}
 
   create_table "products", :force => true do |t|
-    t.text     "name",              :limit => 16777215
-    t.text     "url",               :limit => 16777215
+    t.text     "name"
+    t.text     "url"
     t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -77,7 +77,7 @@ ActiveRecord::Schema.define(:version => 20110906103017) do
     t.integer  "shop_id"
     t.integer  "product_id"
     t.float    "cost"
-    t.text     "name",         :limit => 16777215
+    t.text     "name"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "url"

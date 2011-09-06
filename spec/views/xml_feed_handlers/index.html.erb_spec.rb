@@ -1,28 +1,21 @@
 require 'spec_helper'
 
-describe "xml_feed_updates/index.html.erb" do
+describe "xml_feed_handlers/index.html.erb" do
   before(:each) do
+    shop = Shop.create({:name => "alza.sk", :url => "http://www.alze.sk"})
+    handler1 = XmlFeedHandler.create({:feed_url => "/home/jj", :shop => shop, :status => "stav", :result=> "vysledok"})
+    handler2 = XmlFeedHandler.create({:feed_url => "/home/jj", :shop => shop, :status => "stav", :result=> "vysledok"})
+
     assign(:xml_feed_handlers, [
-      stub_model(XmlFeedHandler,
-        :url => "MyText",
-        :status => "Status",
-        :result => "MyText"
-      ),
-      stub_model(XmlFeedHandler,
-        :url => "MyText",
-        :status => "Status",
-        :result => "MyText"
-      )
+      handler1,
+      handler2
     ])
   end
 
-  it "renders a list of xml_feed_updates" do
+  it "renders a list of xml_feed_handlers" do
     render
-    # Run the generator again with the --webrat flag if you want to use webrat matchers
-    assert_select "tr>td", :text => "MyText".to_s, :count => 2
-    # Run the generator again with the --webrat flag if you want to use webrat matchers
-    assert_select "tr>td", :text => "Status".to_s, :count => 2
-    # Run the generator again with the --webrat flag if you want to use webrat matchers
-    assert_select "tr>td", :text => "MyText".to_s, :count => 2
+    assert_select "tr>td", :text => "/home/jj", :count => 2
+    assert_select "tr>td", :text => "alza.sk", :count => 2
+    assert_select "tr>td", :text => "vysledok", :count => 2
   end
 end
