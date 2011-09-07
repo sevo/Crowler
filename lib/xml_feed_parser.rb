@@ -40,13 +40,13 @@ module XmlFeedParser
   end
 
 
-  def self.parse(document,shop,save_result_to)
+  def self.parse(document,shop,handler)
 
-    result = "#{shop.name} #{DateTime.new.in_time_zone}"
+    result_text = "#{shop.name} #{DateTime.new.in_time_zone}"
     feed = Feed.parse(document)
 
     entries_number = feed.entries.size
-    result += "\n Total number of products: #{entries_number}"
+    result_text += "\n Total number of products: #{entries_number}"
 
     counter = 0
     skipped = 0
@@ -61,13 +61,17 @@ module XmlFeedParser
 
       puts "#{counter}\t/#{entries_number} | #{e.name}"
 
-      product = Product.match(e.name)
-      product.manufacturer = e.manufacturer unless e.manufacturer == nil
-      product.part_number = e.part_number unless e.part_number == nil
-      product.ean = e.ean unless e.ean == nil
-      product.save
+      result = XmlImportResult.match(e.name)
 
-      offer = ShopOffer.find_or_create_by_product_id_and_shop_id(product.id,shop.id)
+      if result.status == "unknown"
+        offer = Shop.create(:shop => shop)
+      else
+        offer = ShopOffer.find_or_create_by_product_id_and_shop_id(result.product.id,shop.id)
+      end
+
+      offer.manufacturer = e.manufacturer unless e.manufacturer == nil
+      offer.part_number = e.part_number unless e.part_number == nil
+      offer.ean = e.ean unless e.ean == nil
       offer.name = e.name
       offer.cost = e.price.to_f
       offer.availability = e.availability unless e.availability == nil
@@ -76,13 +80,23 @@ module XmlFeedParser
       offer.image_url = e.picture unless e.picture == nil
       offer.description = e.description unless e.description == nil or e.description == ""
 
-      offer.save              
+      offer.save
+
+      result.shop_offer = offer
+      result.xml_feed_handler = handler
+      result.save
+
+      unless result.status == "unknown"
+        offer.product = result.product
+        offer.save
+      end
+
     end
 
-    result+= "\n#{skipped} of products skipped (without required attributes)"
+    result_text+= "\n#{skipped} of products skipped (without required attributes)"
 
-    save_result_to.result = result
-    save_result_to.save
+    handler.result = result_text
+    handler.save
   end
   
 end

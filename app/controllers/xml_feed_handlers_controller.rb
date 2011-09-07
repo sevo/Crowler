@@ -14,6 +14,7 @@ class XmlFeedHandlersController < ApplicationController
   # GET /xml_feed_handlers/1.xml
   def show
     @xml_feed_handler = XmlFeedHandler.find(params[:id])
+    @results = @xml_feed_handler.xml_import_results
 
     respond_to do |format|
       format.html # show.html.erb

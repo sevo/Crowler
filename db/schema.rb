@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110907115934) do
+ActiveRecord::Schema.define(:version => 20110906154040) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -43,10 +43,7 @@ ActiveRecord::Schema.define(:version => 20110907115934) do
     t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "manufacturer"
     t.text     "short_description"
-    t.text     "part_number"
-    t.text     "ean"
   end
 
   add_index "products", ["name"], :name => "index_products_on_name", :length => {"name"=>255}
@@ -64,6 +61,9 @@ ActiveRecord::Schema.define(:version => 20110907115934) do
     t.text     "url"
     t.string   "availability"
     t.float    "shipping"
+    t.string   "manufacturer"
+    t.string   "part_number"
+    t.string   "ean"
   end
 
   add_index "shop_offers", ["product_id"], :name => "index_shop_offers_on_product_id"
@@ -87,7 +87,6 @@ ActiveRecord::Schema.define(:version => 20110907115934) do
     t.integer  "shop_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "xml_file_download_id"
   end
 
   create_table "xml_file_downloads", :force => true do |t|

@@ -1,6 +1,7 @@
 class XmlFeedHandler < ActiveRecord::Base
   belongs_to :shop
   has_one :xml_file_download
+  has_many :xml_import_results
   
   validates_presence_of :shop_id
   after_create :run

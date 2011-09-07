@@ -19,5 +19,22 @@
   <b>Result:</b>
   <%= @xml_feed_handler.result %>
 </p>
+<table>
+  <tr>
+    <td><b>Offer name</b></td>
+    <td><b>Product name</b></td>
+    <td><b>Status</b></td>
+    <td><b>Match</b></td>
+  </tr>
+  <% @results.each do |r| %>
+  <tr>
+    <td><%= r.shop_offer.name %></td>
+    <td><%= r.product.name unless r.product == nil %></td>
+    <td><%= r.status %></td>
+    <td><%= r.match %></td>
+  </tr>
+  <% end %>
+
+</table>
 
 <%= link_to 'Back', xml_feed_handlers_path %>
