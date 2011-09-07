@@ -1,7 +1,6 @@
 # encoding: UTF-8
 
 require 'spec_helper'
-require 'delayed_job_spec_helper'
 
 describe XmlFileDownload do
   before :each do

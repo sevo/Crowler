@@ -10,11 +10,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110906154040) do
+ActiveRecord::Schema.define(:version => 20110907115934) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
-    t.text     "url",        :limit => 16777215
+    t.text     "url"
     t.string   "ancestry"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -37,30 +37,9 @@ ActiveRecord::Schema.define(:version => 20110906154040) do
 
   add_index "delayed_jobs", ["priority", "run_at"], :name => "delayed_jobs_priority"
 
-  create_table "product_descriptions", :force => true do |t|
-    t.text     "description"
-    t.integer  "shop_id"
-    t.integer  "product_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "product_descriptions", ["product_id"], :name => "index_product_descriptions_on_product_id"
-  add_index "product_descriptions", ["shop_id"], :name => "index_product_descriptions_on_shop_id"
-
-  create_table "product_images", :force => true do |t|
-    t.integer  "product_id"
-    t.text     "url"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "product_images", ["product_id"], :name => "index_product_images_on_product_id"
-  add_index "product_images", ["url"], :name => "index_product_images_on_url", :length => {"url"=>255}
-
   create_table "products", :force => true do |t|
-    t.text     "name",              :limit => 16777215
-    t.text     "url",               :limit => 16777215
+    t.text     "name"
+    t.text     "url"
     t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -77,7 +56,9 @@ ActiveRecord::Schema.define(:version => 20110906154040) do
     t.integer  "shop_id"
     t.integer  "product_id"
     t.float    "cost"
-    t.text     "name",         :limit => 16777215
+    t.text     "name"
+    t.text     "image_url"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "url"
@@ -87,6 +68,7 @@ ActiveRecord::Schema.define(:version => 20110906154040) do
 
   add_index "shop_offers", ["product_id"], :name => "index_shop_offers_on_product_id"
   add_index "shop_offers", ["shop_id"], :name => "index_shop_offers_on_shop_id"
+  add_index "shop_offers", ["url"], :name => "index_shop_offers_on_url", :length => {"url"=>255}
 
   create_table "shops", :force => true do |t|
     t.text     "name"
@@ -105,6 +87,7 @@ ActiveRecord::Schema.define(:version => 20110906154040) do
     t.integer  "shop_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "xml_file_download_id"
   end
 
   create_table "xml_file_downloads", :force => true do |t|

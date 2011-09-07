@@ -5,6 +5,8 @@ class CreateShopOffers < ActiveRecord::Migration
       t.integer :product_id
       t.float :cost
       t.text :name
+      t.text :image_url
+      t.text :description
 
       t.timestamps
     end
