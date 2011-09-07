@@ -36,7 +36,7 @@ class XmlFeedHandlersController < ApplicationController
   # POST /xml_feed_handlers.xml
   def create
     shop = Shop.find_by_name(params[:xml_feed_handler][:shop])
-    @xml_feed_handler = XmlFeedHandler.create({:feed_url => params[:xml_feed_handler][:feed_url]})
+    @xml_feed_handler = XmlFeedHandler.create({:feed_path => params[:xml_feed_handler][:feed_path]})
     @xml_feed_handler.shop = shop
 
     respond_to do |format|

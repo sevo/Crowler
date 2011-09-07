@@ -18,10 +18,7 @@ class XmlFeedHandler < ActiveRecord::Base
     require "#{RAILS_ROOT}/lib/xml_feed_parser.rb"
     self.status = "running"
     save
-    XmlFeedParser::parse(open(feed_url),shop,self)
-  end
-
-  def after(job)
+    XmlFeedParser::parse(open(feed_path),shop,self)
     self.status = "finished"
     save
   end

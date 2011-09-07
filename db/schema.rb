@@ -99,7 +99,7 @@ ActiveRecord::Schema.define(:version => 20110906154040) do
   add_index "shops", ["url"], :name => "index_shops_on_url", :length => {"url"=>255}
 
   create_table "xml_feed_handlers", :force => true do |t|
-    t.text     "feed_url"
+    t.text     "feed_path"
     t.string   "status"
     t.text     "result"
     t.integer  "shop_id"
@@ -111,6 +111,8 @@ ActiveRecord::Schema.define(:version => 20110906154040) do
     t.text     "url"
     t.text     "path"
     t.string   "status"
+    t.integer  "shop_id"
+    t.string   "result"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

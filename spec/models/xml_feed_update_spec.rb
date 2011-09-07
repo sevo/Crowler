@@ -10,11 +10,10 @@ describe XmlFeedHandler do
     def valid_attributes
       {
           :shop => @shop,
-          :feed_url => "#{RAILS_ROOT}/spec/tmp/feed.xml"
+          :feed_path => "#{RAILS_ROOT}/spec/tmp/feed.xml"
       }
     end
-  
-  describe "creating new feed handler" do
+
     it "should be valid" do
       handler = XmlFeedHandler.create(valid_attributes)
       handler.valid?.should == true
@@ -28,7 +27,7 @@ describe XmlFeedHandler do
     it "should run after perform called" do
       handler = XmlFeedHandler.create(valid_attributes)
       handler.perform
-      handler.status.should == "running"
+      handler.status.should == "finished"
       handler.result.should == "alza.sk -4712-01-01 00:00:00 UTC\n Total number of products: 4\n0 of products skipped (without required attributes)"
     end
 
@@ -42,5 +41,4 @@ describe XmlFeedHandler do
       products.map {|p| p.name}.should include "IntelÂ® Main IO Fan Module"
       products.map {|p| p.name}.should include "IntelÂ® Main System Fan Module"
     end
-  end
 end

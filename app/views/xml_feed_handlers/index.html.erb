@@ -2,7 +2,7 @@
 
 <table>
   <tr>
-    <th>Feed Url</th>
+    <th>Feed path</th>
     <th>Shop</th>
     <th>Status</th>
     <th>Result</th>
@@ -13,7 +13,7 @@
 
 <% @xml_feed_handlers.each do |xml_feed_handler| %>
   <tr>
-    <td><%= xml_feed_handler.feed_url %></td>
+    <td><%= xml_feed_handler.feed_path %></td>
     <td><%= xml_feed_handler.shop.name %></td>
     <td><%= xml_feed_handler.status %></td>
     <td><%= xml_feed_handler.result %></td>

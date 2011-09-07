@@ -4,6 +4,8 @@ class CreateXmlFileDownloads < ActiveRecord::Migration
       t.text :url
       t.text :path
       t.string :status
+      t.integer :shop_id
+      t.string :result
 
       t.timestamps
     end

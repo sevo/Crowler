@@ -32,13 +32,12 @@ class XmlFileDownloadsController < ApplicationController
     end
   end
 
-  # GET /xml_file_downloads/1/edit
-
-
   # POST /xml_file_downloads
   # POST /xml_file_downloads.xml
   def create
-    @xml_file_download = XmlFileDownload.new(params[:xml_file_download])
+    shop = Shop.find_by_name(params[:xml_file_download][:shop])
+    @xml_file_download = XmlFileDownload.create({:url => params[:xml_file_download][:url]})
+    @xml_file_download.shop = shop
 
     respond_to do |format|
       if @xml_file_download.save
@@ -51,18 +50,16 @@ class XmlFileDownloadsController < ApplicationController
     end
   end
 
-  # PUT /xml_file_downloads/1
-  # PUT /xml_file_downloads/1.xml
-
-
   # DELETE /xml_file_downloads/1
   # DELETE /xml_file_downloads/1.xml
   def destroy
     @xml_file_download = XmlFileDownload.find(params[:id])
+    notice = 'Xml file was successfully deleted.'
+
     @xml_file_download.destroy
 
     respond_to do |format|
-      format.html { redirect_to(xml_file_downloads_url) }
+      format.html { redirect_to(xml_file_downloads_url :notice => notice) }
       format.xml  { head :ok }
     end
   end

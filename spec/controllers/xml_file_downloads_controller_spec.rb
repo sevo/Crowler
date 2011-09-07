@@ -23,8 +23,12 @@ describe XmlFileDownloadsController do
   # This should return the minimal set of attributes required to create a valid
   # XmlFileDownload. As you add validations to XmlFileDownload, be sure to
   # update the return value of this method accordingly.
+  before :each do
+    Shop.create({:name => "alza.sk", :url => "Http://www.alza.sk"})
+  end
+
   def valid_attributes
-    {}
+    {:shop_id => 1}
   end
 
   describe "GET index" do
@@ -50,33 +54,7 @@ describe XmlFileDownloadsController do
     end
   end
 
-  describe "GET edit" do
-    it "assigns the requested xml_file_download as @xml_file_download" do
-      xml_file_download = XmlFileDownload.create! valid_attributes
-      get :edit, :id => xml_file_download.id.to_s
-      assigns(:xml_file_download).should eq(xml_file_download)
-    end
-  end
-
   describe "POST create" do
-    describe "with valid params" do
-      it "creates a new XmlFileDownload" do
-        expect {
-          post :create, :xml_file_download => valid_attributes
-        }.to change(XmlFileDownload, :count).by(1)
-      end
-
-      it "assigns a newly created xml_file_download as @xml_file_download" do
-        post :create, :xml_file_download => valid_attributes
-        assigns(:xml_file_download).should be_a(XmlFileDownload)
-        assigns(:xml_file_download).should be_persisted
-      end
-
-      it "redirects to the created xml_file_download" do
-        post :create, :xml_file_download => valid_attributes
-        response.should redirect_to(XmlFileDownload.last)
-      end
-    end
 
     describe "with invalid params" do
       it "assigns a newly created but unsaved xml_file_download as @xml_file_download" do
@@ -117,24 +95,6 @@ describe XmlFileDownloadsController do
         xml_file_download = XmlFileDownload.create! valid_attributes
         put :update, :id => xml_file_download.id, :xml_file_download => valid_attributes
         response.should redirect_to(xml_file_download)
-      end
-    end
-
-    describe "with invalid params" do
-      it "assigns the xml_file_download as @xml_file_download" do
-        xml_file_download = XmlFileDownload.create! valid_attributes
-        # Trigger the behavior that occurs when invalid params are submitted
-        XmlFileDownload.any_instance.stub(:save).and_return(false)
-        put :update, :id => xml_file_download.id.to_s, :xml_file_download => {}
-        assigns(:xml_file_download).should eq(xml_file_download)
-      end
-
-      it "re-renders the 'edit' template" do
-        xml_file_download = XmlFileDownload.create! valid_attributes
-        # Trigger the behavior that occurs when invalid params are submitted
-        XmlFileDownload.any_instance.stub(:save).and_return(false)
-        put :update, :id => xml_file_download.id.to_s, :xml_file_download => {}
-        response.should render_template("edit")
       end
     end
   end
