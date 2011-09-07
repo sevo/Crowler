@@ -17,7 +17,7 @@ describe ShopsParser do
 
     count.should == 20
     Shop.find(:all).count.should == 20
-    Shop.find_by_name("Ecopuf - Sedacie relaxačné vaky").url.should == "www.ecopuf.sk"
+    Shop.find_by_name("eLIMAL.sk - Najvýhodnejší nákup na internete").url.should == "http://www.eLIMAL.sk/"
   end
 
 

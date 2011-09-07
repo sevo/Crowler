@@ -73,44 +73,12 @@ describe XmlFileDownloadsController do
     end
   end
 
-  describe "PUT update" do
-    describe "with valid params" do
-      it "updates the requested xml_file_download" do
-        xml_file_download = XmlFileDownload.create! valid_attributes
-        # Assuming there are no other xml_file_downloads in the database, this
-        # specifies that the XmlFileDownload created on the previous line
-        # receives the :update_attributes message with whatever params are
-        # submitted in the request.
-        XmlFileDownload.any_instance.should_receive(:update_attributes).with({'these' => 'params'})
-        put :update, :id => xml_file_download.id, :xml_file_download => {'these' => 'params'}
-      end
-
-      it "assigns the requested xml_file_download as @xml_file_download" do
-        xml_file_download = XmlFileDownload.create! valid_attributes
-        put :update, :id => xml_file_download.id, :xml_file_download => valid_attributes
-        assigns(:xml_file_download).should eq(xml_file_download)
-      end
-
-      it "redirects to the xml_file_download" do
-        xml_file_download = XmlFileDownload.create! valid_attributes
-        put :update, :id => xml_file_download.id, :xml_file_download => valid_attributes
-        response.should redirect_to(xml_file_download)
-      end
-    end
-  end
-
   describe "DELETE destroy" do
     it "destroys the requested xml_file_download" do
       xml_file_download = XmlFileDownload.create! valid_attributes
       expect {
         delete :destroy, :id => xml_file_download.id.to_s
       }.to change(XmlFileDownload, :count).by(-1)
-    end
-
-    it "redirects to the xml_file_downloads list" do
-      xml_file_download = XmlFileDownload.create! valid_attributes
-      delete :destroy, :id => xml_file_download.id.to_s
-      response.should redirect_to(xml_file_downloads_url)
     end
   end
 

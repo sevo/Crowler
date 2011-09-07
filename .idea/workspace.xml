@@ -2,26 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c342f9f9-bbee-4fd1-9c54-620dfa9d6993" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/delayed_job_spec_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Crowler.iml" afterPath="$PROJECT_DIR$/.idea/Crowler.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec/views/xml_file_downloads/edit.html.erb_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec/views/xml_file_downloads/new.html.erb_spec.rb" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/xml_feed_handlers_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/xml_feed_handlers_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/xml_file_downloads_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/xml_file_downloads_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/shop.rb" afterPath="$PROJECT_DIR$/app/models/shop.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/xml_feed_handler.rb" afterPath="$PROJECT_DIR$/app/models/xml_feed_handler.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/xml_file_download.rb" afterPath="$PROJECT_DIR$/app/models/xml_file_download.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/xml_feed_handlers/index.html.erb" afterPath="$PROJECT_DIR$/app/views/xml_feed_handlers/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/xml_feed_handlers/show.html.erb" afterPath="$PROJECT_DIR$/app/views/xml_feed_handlers/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/xml_file_downloads/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/xml_file_downloads/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/xml_file_downloads/show.html.erb" afterPath="$PROJECT_DIR$/app/views/xml_file_downloads/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20110906103017_create_xml_feed_handler.rb" afterPath="$PROJECT_DIR$/db/migrate/20110906103017_create_xml_feed_handler.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20110906154040_create_xml_file_downloads.rb" afterPath="$PROJECT_DIR$/db/migrate/20110906154040_create_xml_file_downloads.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/xml_file_downloads_controller_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/xml_file_downloads_controller_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/xml_feed_update_spec.rb" afterPath="$PROJECT_DIR$/spec/models/xml_feed_update_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/xml_file_download_spec.rb" afterPath="$PROJECT_DIR$/spec/models/xml_file_download_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/parsers/shops_parser_spec.rb" afterPath="$PROJECT_DIR$/spec/parsers/shops_parser_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/views/xml_feed_handlers/index.html.erb_spec.rb" afterPath="$PROJECT_DIR$/spec/views/xml_feed_handlers/index.html.erb_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/views/xml_file_downloads/index.html.erb_spec.rb" afterPath="$PROJECT_DIR$/spec/views/xml_file_downloads/index.html.erb_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/views/xml_file_downloads/show.html.erb_spec.rb" afterPath="$PROJECT_DIR$/spec/views/xml_file_downloads/show.html.erb_spec.rb" />
     </list>
     <ignored path="Crowler.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,28 +32,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="xml_feed_update_spec.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/models/xml_feed_update_spec.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="40" selection-start="748" selection-end="748" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="xml_file_download_spec.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="xml_file_download_spec.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/models/xml_file_download_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="6" selection-start="1372" selection-end="1372" vertical-scroll-proportion="1.059322">
+            <state line="39" column="41" selection-start="1010" selection-end="1010" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="xml_feed_handler.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/xml_feed_handler.rb">
+      <file leaf-file-name="xml_file_downloads_controller_spec.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/controllers/xml_file_downloads_controller_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="5" selection-start="446" selection-end="446" vertical-scroll-proportion="0.0">
+            <state line="81" column="7" selection-start="3200" selection-end="3200" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb_spec.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/views/xml_feed_handlers/index.html.erb_spec.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="48" selection-start="333" selection-end="333" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb_spec.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/views/xml_file_downloads/index.html.erb_spec.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="24" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="shops_parser_spec.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/spec/parsers/shops_parser_spec.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="85" selection-start="626" selection-end="626" vertical-scroll-proportion="0.7620321">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="new.html.erb_spec.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/views/xml_feed_handlers/new.html.erb_spec.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.erb_spec.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/views/xml_file_downloads/show.html.erb_spec.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="35" selection-start="376" selection-end="376" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -89,46 +113,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20110906103017_create_xml_feed_handler.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20110906103017_create_xml_feed_handler.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/xml_file_downloads/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="13" column="16" selection-start="168" selection-end="168" vertical-scroll-proportion="-8.125">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="20110906154040_create_xml_file_downloads.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20110906154040_create_xml_file_downloads.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="22" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="delayed_job_spec_helper.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/delayed_job_spec_helper.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="9" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="spec_helper.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -152,14 +140,8 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/xml_file_downloads/index.html.erb" />
-        <option value="$PROJECT_DIR$/db/migrate/20110906103017_create_xml_feed_handler.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/xml_feed_handlers_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/xml_feed_handlers/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/xml_feed_handlers/show.html.erb" />
         <option value="$PROJECT_DIR$/app/models/shop.rb" />
         <option value="$PROJECT_DIR$/app/views/xml_file_downloads/_form.html.erb" />
-        <option value="$PROJECT_DIR$/spec/controllers/xml_file_downloads_controller_spec.rb" />
         <option value="$PROJECT_DIR$/spec/delayed_job_spec_helper.rb" />
         <option value="$PROJECT_DIR$/app/models/xml_feed_handler.rb" />
         <option value="$PROJECT_DIR$/spec/models/xml_feed_update_spec.rb" />
@@ -168,6 +150,12 @@
         <option value="$PROJECT_DIR$/app/models/xml_file_download.rb" />
         <option value="$PROJECT_DIR$/app/controllers/xml_file_downloads_controller.rb" />
         <option value="$PROJECT_DIR$/spec/models/xml_file_download_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/controllers/xml_file_downloads_controller_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/views/xml_feed_handlers/index.html.erb_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/views/xml_file_downloads/index.html.erb_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/views/xml_file_downloads/new.html.erb_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/views/xml_file_downloads/show.html.erb_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/parsers/shops_parser_spec.rb" />
       </list>
     </option>
   </component>
@@ -244,7 +232,87 @@
               <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.folders.RSpecFolderNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.folders.FolderSubFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xml_file_downloads" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.folders.FolderSubFolderNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Crowler" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Crowler" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RSpec" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.folders.RSpecFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.folders.FolderSubFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xml_feed_handlers" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.folders.FolderSubFolderNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Crowler" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Crowler" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RSpec" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.folders.RSpecFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="parsers" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.folders.FolderSubFolderNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Crowler" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Crowler" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RSpec" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.folders.RSpecFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="models" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.folders.FolderSubFolderNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Crowler" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Crowler" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RSpec" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.folders.RSpecFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.folders.FolderSubFolderNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -936,10 +1004,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1292" height="781" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32776934" sideWeight="0.0" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32776934" sideWeight="0.0" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1012,48 +1080,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/xml_feed_handlers_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="4" selection-start="893" selection-end="1086" vertical-scroll-proportion="-4.1153846">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/xml_feed_handlers/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/xml_feed_handlers/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="2" selection-start="499" selection-end="588" vertical-scroll-proportion="-6.875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/xml_file_downloads/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="10" selection-start="585" selection-end="585" vertical-scroll-proportion="-12.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/controllers/xml_feed_handlers_controller_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="5" selection-start="1303" selection-end="1442" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/controllers/xml_file_downloads_controller_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="7" selection-start="4163" selection-end="4163" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -1119,7 +1145,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/models/xml_file_download_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="6" selection-start="1372" selection-end="1372" vertical-scroll-proportion="1.059322">
+        <state line="39" column="41" selection-start="1010" selection-end="1010" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/controllers/xml_file_downloads_controller_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="7" selection-start="3200" selection-end="3200" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/views/xml_feed_handlers/index.html.erb_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="48" selection-start="333" selection-end="333" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/views/xml_file_downloads/show.html.erb_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="35" selection-start="376" selection-end="376" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/views/xml_feed_handlers/new.html.erb_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/views/xml_file_downloads/index.html.erb_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="24" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/parsers/shops_parser_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="85" selection-start="626" selection-end="626" vertical-scroll-proportion="0.7620321">
           <folding />
         </state>
       </provider>
