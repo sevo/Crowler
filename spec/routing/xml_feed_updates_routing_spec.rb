@@ -19,5 +19,9 @@ describe XmlFeedHandlersController do
       post("/xml_feed_handlers").should route_to("xml_feed_handlers#create")
     end
 
+    it "routes to #connect" do
+      post("/xml_feed_handlers/1/connect").should route_to("xml_feed_handlers#connect", :id => "1")
+    end
+
   end
 end

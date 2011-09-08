@@ -25,6 +25,9 @@
     <td><b>Product name</b></td>
     <td><b>Status</b></td>
     <td><b>Match</b></td>
+    <td><b>Most common</b></td>
+    <td><b>Action</b></td>
+
   </tr>
   <% @results.each do |r| %>
   <tr>
@@ -32,6 +35,15 @@
     <td><%= r.product.name unless r.product == nil %></td>
     <td><%= r.status %></td>
     <td><%= r.match %></td>
+    <td><%= r.most_common.name unless r.most_common == nil%></td>
+    <td>
+      <%= form_tag connect_xml_feed_handler_path do%>
+      <%= hidden_field :result, r.id %>
+      <%= select_tag :product, options_for_select(@select_array,r.most_common.id) unless r.most_common == nil %>
+      <%= select_tag :product, options_for_select(@select_array) if r.most_common == nil %>
+      <%= submit_tag "Link" %>
+      <% end %>
+    </td>
   </tr>
   <% end %>
 

@@ -14,6 +14,12 @@ namespace :xml_parser do
   desc "Prepare database for search for similar strings"
   task :prepare_database => :environment do
     require File.join(File.dirname(__FILE__), "../xml_feed_parser.rb")
-    XmlFeedParser::create_match_database
+    XmlImportResult.create_match_database
+  end
+
+  desc "Prepare database for search for similar strings"
+  task :match => :environment do
+    require File.join(File.dirname(__FILE__), "../xml_feed_parser.rb")
+    puts XmlImportResult.similar("KLIETKA PRE VTÁKY NINFA")
   end
 end

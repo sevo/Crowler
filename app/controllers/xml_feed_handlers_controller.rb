@@ -13,8 +13,15 @@ class XmlFeedHandlersController < ApplicationController
   # GET /xml_feed_handlers/1
   # GET /xml_feed_handlers/1.xml
   def show
+    products = Product.find(:all)
     @xml_feed_handler = XmlFeedHandler.find(params[:id])
     @results = @xml_feed_handler.xml_import_results
+
+    @select_array = []
+    products[0..20].each do |p|
+      @select_array << [p.name, p.id] if p.name.length < 30
+      @select_array << [p.name[0..30]+" ...", p.id] unless p.name.length < 30
+    end
 
     respond_to do |format|
       format.html # show.html.erb
@@ -57,4 +64,22 @@ class XmlFeedHandlersController < ApplicationController
 
     redirect_to(xml_feed_handlers_path)
   end
+
+  def connect
+    @handler = XmlFeedHandler.find(XmlFeedHandler.find(params[:id]))
+    
+    result_id = params[:result].first.first
+    product_id = params[:product]
+
+    result = XmlImportResult.find(result_id)
+    product = Product.find(product_id)
+    result.product = product
+    result.status = "linked"
+    result.save
+    result.shop_offer.product = product
+    result.shop_offer.save
+    
+    redirect_to(xml_feed_handler_path(@handler))
+  end
+  
 end
