@@ -15,7 +15,7 @@ module ProductParser
     product_count = 0
 
     #category_leafs.each do |c|
-    category_leafs[1..10].peach (5) do |c|
+    category_leafs[0..10].peach (5) do |c|
       agent.get(c.url+"?catalog_numitems=200")
       pages,products = process_product(c,agent,1)
       product_count+=products

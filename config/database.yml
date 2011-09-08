@@ -9,7 +9,7 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: Crowler_development
+  database: Crowler_matcher_testing
   pool: 100
   username: development
   password: development

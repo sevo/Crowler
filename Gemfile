@@ -7,6 +7,7 @@ gem 'peach'
 gem 'mechanize'
 gem 'sax-machine'
 gem 'delayed_job'
+gem 'amatch'
 
 group :cucumber do
   gem 'capybara'

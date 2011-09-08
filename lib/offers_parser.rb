@@ -9,7 +9,7 @@ module OffersParser
   #vyberie zo strany ponuky vsetkych produktov (v databaze) vsetkymi obchodami
   def self.all_product_offers
     products = Product.find(:all)
-    products[0..200].peach(5) do |p|
+    products[0..100].peach(5) do |p|
       product_detail(p)
     end
   end

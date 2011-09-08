@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110906154040) do
+ActiveRecord::Schema.define(:version => 20110907125036) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -87,6 +87,7 @@ ActiveRecord::Schema.define(:version => 20110906154040) do
     t.integer  "shop_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "xml_file_download_id"
   end
 
   create_table "xml_file_downloads", :force => true do |t|
@@ -95,6 +96,17 @@ ActiveRecord::Schema.define(:version => 20110906154040) do
     t.string   "status"
     t.integer  "shop_id"
     t.string   "result"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "xml_import_results", :force => true do |t|
+    t.integer  "xml_feed_handler_id"
+    t.integer  "shop_offer_id"
+    t.integer  "product_id"
+    t.integer  "most_common_id"
+    t.float    "match"
+    t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

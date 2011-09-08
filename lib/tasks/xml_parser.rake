@@ -10,4 +10,10 @@ namespace :xml_parser do
     #XmlFeedParser::parse(open("http://www.compatak.sk/export/pricemania.xml"))
     XmlFeedParser::parse(open("/home/jakub/Desktop/pricemania.xml").read,shop,XmlFeedHandler.find(:first))
   end
+
+  desc "Prepare database for search for similar strings"
+  task :prepare_database => :environment do
+    require File.join(File.dirname(__FILE__), "../xml_feed_parser.rb")
+    XmlFeedParser::create_match_database
+  end
 end

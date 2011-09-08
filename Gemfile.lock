@@ -29,6 +29,8 @@ GEM
       activesupport (= 3.0.9)
     activesupport (3.0.9)
     addressable (2.2.6)
+    amatch (0.2.7)
+      spruz (~> 0.2)
     ancestry (1.2.4)
       activerecord (>= 2.2.2)
     arel (2.0.10)
@@ -126,6 +128,7 @@ GEM
       json_pure
       rubyzip
     spork (0.8.5)
+    spruz (0.2.13)
     term-ansicolor (1.0.6)
     thor (0.14.6)
     treetop (1.4.9)
@@ -140,6 +143,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  amatch
   ancestry
   capybara
   cucumber (= 0.7.3)
