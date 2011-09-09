@@ -2,6 +2,11 @@ class XmlFileDownloadsController < ApplicationController
   # GET /xml_file_downloads
   # GET /xml_file_downloads.xml
   def index
+    #########
+
+    @search = XmlFileDownload.search(params[:search])
+    @downloads = @search.relation.all
+    #######
     @xml_file_downloads = XmlFileDownload.all
 
     respond_to do |format|

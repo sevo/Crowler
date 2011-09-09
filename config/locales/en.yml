@@ -3,3 +3,18 @@
 
 en:
   hello: "Hello world"
+  filter: filter
+
+  simple_form:
+    "yes": áno
+    "no": nie
+    labels:
+      xml_file_download:
+        url: url
+        status: status
+        path: path
+      xml_feed_handler:
+        feed_path: feed path
+        status: status
+        result: result
+        shop: shop

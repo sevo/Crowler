@@ -1,25 +1,31 @@
 <h1>Listing xml_file_downloads</h1>
-
-<table>
+<% form_for @search do |f| %>
+  <table>
   <tr>
-    <th>Url</th>
-    <th>Path</th>
-    <th>Status</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <%= admin_table_header @search, f, "xml_file_download",[:url,:status,:path]%>
+    <td>
+          <%= f.submit t("filter") %>
+        </td>
   </tr>
 
-<% @xml_file_downloads.each do |xml_file_download| %>
-  <tr>
-    <td><%= xml_file_download.url %></td>
-    <td><%= xml_file_download.path %></td>
-    <td><%= xml_file_download.status %></td>
-    <td><%= link_to 'Show', xml_file_download %></td>
-    <td><%= link_to 'Destroy', xml_file_download, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+  <% @downloads.each do |download| %>
+      <tr>
+        <td>
+          <%= download.url %>
+        </td>
+        <td>
+          <%= download.status %>
+        </td>
+        <td>
+          <%= download.path %>
+        </td>
+
+    <td><%= link_to 'Show', download %></td>
+    <td><%= link_to 'Destroy', download, :confirm => 'Are you sure?', :method => :delete %></td>
+      </tr>
+    <% end %>
+  </table>
 <% end %>
-</table>
 
 <br />
 

@@ -2,6 +2,9 @@ class XmlFeedHandlersController < ApplicationController
   # GET /xml_feed_handlers
   # GET /xml_feed_handlers.xml
   def index
+    @search = XmlFeedHandler.search(params[:search])
+    @handlers = @search.relation.all
+
     @xml_feed_handlers = XmlFeedHandler.all
 
     respond_to do |format|
