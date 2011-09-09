@@ -7,7 +7,12 @@ gem 'peach'
 gem 'mechanize'
 gem 'sax-machine'
 gem 'delayed_job'
-gem 'amatch'
+
+group :test do
+  gem 'capybara'
+  gem 'rspec-rails', '>= 2.0.0.beta.10'
+  gem 'launchy'
+end
 
 group :cucumber do
   gem 'capybara'
