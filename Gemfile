@@ -14,6 +14,10 @@ group :test do
   gem 'rspec-rails', '>= 2.0.0.beta.10'
   gem 'launchy'
   gem 'meta_search'
+  gem 'factory_girl'
+  gem "guard-rspec"
+  gem 'rb-inotify'
+  gem 'libnotify'
 end
 
 group :cucumber do

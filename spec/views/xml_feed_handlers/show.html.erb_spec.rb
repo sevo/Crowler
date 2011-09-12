@@ -62,11 +62,18 @@ describe "xml_feed_handlers/show.html.erb" do
   end
 
   it "should show import results" do
-    shop = Shop.create({:name => "alza.sk", :url => "http://www.alza.sk"})
-    product = Product.create(:name => "Sencor SCD 7405BMR")
-    offer = ShopOffer.create(:name => "Sencor SCD 7405BMR", :shop => shop, :product => product)
-    product = Product.create(:name => "Autec Race 5 7x17 5x108 ET45")
-    offer = ShopOffer.create(:name => "Autec Race 5 7x17 5x108 ET45", :shop => shop, :product => product)
+    #shop = Shop.create({:name => "alza.sk", :url => "http://www.alza.sk"})
+    #product = Product.create(:name => "Sencor SCD 7405BMR")
+    #offer = ShopOffer.create(:name => "Sencor SCD 7405BMR", :shop => shop, :product => product)
+    #product = Product.create(:name => "Autec Race 5 7x17 5x108 ET45")
+    #offer = ShopOffer.create(:name => "Autec Race 5 7x17 5x108 ET45", :shop => shop, :product => product)
+
+    shop = Factory(:shop, :name => "alza.sk")
+    product = Factory(:product, :name => "Sencor SCD 7405BMR")
+    offer = Factory(:shop_offer, :name => "Sencor SCD 7405BMR", :shop => shop, :product => product)
+    product = Factory(:product, :name => "Autec Race 5 7x17 5x108 ET45")
+    offer = Factory(:shop_offer, :name => "Autec Race 5 7x17 5x108 ET45", :shop => shop, :product => product)
+
     @xml_feed_handler = XmlFeedHandler.create(:shop => shop, :feed_path => "#{RAILS_ROOT}/spec/tmp/feed.xml")
     @xml_feed_handler.perform
 
