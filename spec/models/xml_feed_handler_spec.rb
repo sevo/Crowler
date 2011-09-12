@@ -30,15 +30,4 @@ describe XmlFeedHandler do
       handler.status.should == "finished"
       handler.result.should == "alza.sk -4712-01-01 00:00:00 UTC\n Total number of products: 4\n0 of products skipped (without required attributes)"
     end
-
-    it "should create products in database" do
-      handler = XmlFeedHandler.create(valid_attributes)
-      handler.perform
-      products = Product.find(:all)
-      products.count.should == 4
-      products.map {|p| p.name}.should include "Adobe CS5 Design STD WIN CZ GOV License 1300"
-      products.map {|p| p.name}.should include "IBM 500GB 3.5in HS 7.2K SATA HDD 41Y8226"
-      products.map {|p| p.name}.should include "IntelÂ® Main IO Fan Module"
-      products.map {|p| p.name}.should include "IntelÂ® Main System Fan Module"
-    end
 end

@@ -20,7 +20,8 @@ describe XmlFeedHandlersController do
     end
 
     it "routes to #connect" do
-      post("/xml_feed_handlers/1/connect").should route_to("xml_feed_handlers#connect", :id => "1")
+      Factory(:xml_feed_handler)
+      get("/xml_feed_handlers/1/connect").should route_to("xml_feed_handlers#connect", :id => "1")
     end
 
   end

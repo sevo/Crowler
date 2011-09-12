@@ -52,7 +52,6 @@ describe XmlImportResult do
   it "should create import result when no product matched" do
     result = XmlImportResult.match("uzasna",@shop2.id)
     result.status.should == "unknown"
-    result.most_common.should == @product1
     result.shop_offer.should_not == @offer
     ShopOffer.find(:all).size.should == 2
   end

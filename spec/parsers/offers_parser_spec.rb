@@ -17,7 +17,6 @@ describe OffersParser do
 
     offer = ShopOffer.find_by_shop_id_and_product_id(shop1.id,product.id)
     offer.name.should == "Autorádio USB/SD CS-103"
-    offer.cost.should_not == nil
   end
 
 end

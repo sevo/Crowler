@@ -13,9 +13,9 @@ describe "xml_feed_handlers/index.html.erb" do
   end
 
   it "renders a list of xml_feed_handlers" do
-    render
-    assert_select "tr>td", :text => "/home/jj", :count => 2
-    assert_select "tr>td", :text => "alza.sk", :count => 2
-    assert_select "tr>td", :text => "vysledok", :count => 2
+    visit '/xml_feed_handlers'
+    page.should have_content "/home/jj"
+    page.should have_content "alza.sk"
+    page.should have_content "vysledok"
   end
 end
